@@ -17,6 +17,9 @@ func Test_Stacker_Empty(t *testing.T) {
 		t.Errorf("[empty] expected an error on pop, got nil")
 	}
 
+	if err.Error() != "empty Stack" {
+		t.Errorf("[empty] expected 'empty Stack' error on pop, got %s", err.Error())
+	}
 }
 
 // ----------------------------------------------------------------------------
